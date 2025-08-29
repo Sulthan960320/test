@@ -5,3 +5,5 @@ sources:
       schema: raw_schema
       tables:
         - name: stg_customerdata
+        - name: stg_orders
+
