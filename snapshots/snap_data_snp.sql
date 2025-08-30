@@ -1,4 +1,4 @@
-{% snapshot  snap_data_snp_raw %}
+{% snapshot  snap_data_snp %}
 
 {{
     config(
