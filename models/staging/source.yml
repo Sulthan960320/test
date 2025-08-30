@@ -6,4 +6,5 @@ sources:
       tables:
         - name: stg_customerdata
         - name: stg_orders
+        - name: data_snp_raw
 
