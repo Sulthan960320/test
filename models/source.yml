@@ -1,0 +1,15 @@
+version: 2
+sources:
+    - name: datafeed_mydata
+      database: "{{('db1')}}"
+      schema: raw_schema
+      tables:
+        - name: raw_customer
+          columns:
+           - name: c_custkey
+             tests:
+              - unique
+              - not_null
+           - name: c_name
+             tests:
+               - not_null
