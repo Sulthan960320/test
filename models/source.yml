@@ -5,6 +5,13 @@ sources:
       schema: raw_schema
       tables:
          - name: raw_customer_nation
+         - name: raw_order
+           columns:
+            - name: o_orderkey
+              tests:
+               - unique
+               - not_null
+               
          - name: raw_nation
            columns:
            - name: n_nationkey
