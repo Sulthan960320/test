@@ -2,6 +2,7 @@
 
     {{
      config(
+      target_schema='snapshots',
      strategy='check',
      unique_key='ORDER_KEY',
      check_cols=['ORDER_STATUS','ORDER_TOTAL','ORDER_DATE','ORDER_MONTH','ORDER_UNIQUE_ITEMS',
