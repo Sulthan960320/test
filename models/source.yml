@@ -34,6 +34,7 @@ sources:
            - name: c_name
              tests:
                - not_null
+         - name: RAW_RGN
          - name: raw_lineitem
            columns:
             - name: l_orderkey
