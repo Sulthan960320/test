@@ -1,0 +1,53 @@
+version: 2
+sources:
+    - name: datafeed_mydata
+      database: "{{('db1')}}"
+      schema: raw_schema
+      tables:
+         - name: raw_customer_nation
+         - name: raw_supplier
+         - name: raw_partsupp
+         - name: raw_part
+         - name : raw_region
+         - name: raw_order
+           columns:
+            - name: o_orderkey
+              tests:
+               - unique
+               - not_null
+
+         - name: raw_nation
+           columns:
+           - name: n_nationkey
+             tests:
+                - unique
+                - not_null
+           - name: n_name
+             tests:
+                - not_null
+         - name: raw_customer
+           columns:
+           - name: c_custkey
+             tests:
+              - unique
+              - not_null
+           - name: c_name
+             tests:
+               - not_null
+         - name: RAW_RGN
+         - name: raw_lineitem
+           columns:
+            - name: l_orderkey
+              tests:
+                - not_null
+            - name: l_quantity
+              tests:
+                - not_null
+            - name: l_linenumber
+              tests:
+                - not_null     
+    - name: snapshot_tables
+      database: "{{('db1')}}"
+      schema: db_dev
+      tables:
+        - name: snap_ordersdetails
